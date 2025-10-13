@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite as follows"
+type: software
+authors:
+    - name: "Marc Delos"
+      email: "marcdp@dprojects.com"
+title: "Equity price forecasting through artificial intelligence"
+version: 1.0
+abstract: "Improvement of equity price forecasting through artificial intelligence techniques applied to high-frequency financial data."
+date-released: 2025-10-13
+url: "https://github.com/marcdp/master-ia-tfm"
+keywords:
+    - "deep learning"
+    - "time series"
+    - "financial price forecasting"
+    - "algoritthmic trading"
+    - "N-BEATS"
+license: "LGPL-3.0-only"
