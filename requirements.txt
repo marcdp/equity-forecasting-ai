@@ -1,0 +1,13 @@
+pandas
+matplotlib
+scikit-learn
+xgboost
+neuralforecast
+mplfinance
+seaborn
+statsmodels
+shap
+tensorflow
+dprojectstools
+ruptures
+tabulate
