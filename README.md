@@ -319,6 +319,8 @@ The following table summarizes the principal results from the final chronologica
 
 The repository also contains a random-uniform baseline notebook. The table above reports the baseline rows currently available in the consolidated metrics output together with the three deep-learning models.
 
+Machine-readable results are available in [`results/metrics.csv`](results/metrics.csv).
+
 ---
 
 ## Key Findings
@@ -432,6 +434,9 @@ equity-forecasting-ai/
 ├── LICENSE
 ├── CITATION.cff
 ├── requirements.txt
+│
+├── results/
+│   └── metrics.csv
 │
 ├── src/
 │   ├── prepare.ipynb
