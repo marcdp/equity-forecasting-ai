@@ -325,13 +325,17 @@ Machine-readable results are available in [`results/metrics.csv`](results/metric
 
 ![Observed vs forecast trajectories](results/figures/forecast-trajectories.png)
 
-Comparison of the observed synthetic equity basket with reconstructed forecast
-trajectories across the validation and test periods.
+*Observed history and reconstructed forecast trajectories across the validation
+and test periods. The figure illustrates model behavior rather than strong or
+precise price prediction and should be interpreted with the quantitative
+metrics, where regression improvements over simple baselines remain small.*
 
-The figure illustrates how model behavior diverges across architectures and
-should be interpreted together with the quantitative test-set metrics:
-regression improvements over simple baselines remain small even when some
-models capture useful directional behavior.
+### Directional accuracy
+
+![Test-set directional accuracy by model](results/figures/directional-accuracy.png)
+
+*N-BEATS achieved the strongest directional accuracy on the final chronological
+test split, despite its weaker regression metrics relative to LSTM.*
 
 Additional result visualizations are available in [`results/figures/`](results/figures/).
 
@@ -447,6 +451,7 @@ equity-forecasting-ai/
 ├── README.md
 ├── LICENSE
 ├── CITATION.cff
+├── .gitignore
 ├── requirements.txt
 │
 ├── results/
@@ -455,6 +460,7 @@ equity-forecasting-ai/
 │   └── figures/
 │       ├── directional-accuracy.png
 │       ├── forecast-trajectories.png
+│       ├── regression-error-comparison.png
 │       └── simulated-sharpe.png
 │
 ├── src/
@@ -479,7 +485,8 @@ equity-forecasting-ai/
 │
 └── thesis/
     ├── README.md
-    └── masters-thesis.pdf
+    ├── masters-thesis.pdf
+    └── masters-thesis-presentation.pdf
 ```
 
 The repository reflects the original research workflow. A future cleanup may separate reusable Python modules from notebooks more explicitly, but the research notebooks are preserved to maintain traceability to the thesis experiments.

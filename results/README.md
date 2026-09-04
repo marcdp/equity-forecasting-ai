@@ -22,6 +22,15 @@ It contains the following fields:
 * `directional_accuracy_pct` — percentage of predictions with the correct directional classification
 * `simulated_sharpe` — experimental trading-oriented Sharpe-like metric
 
+### `figures/`
+
+Curated visual summaries of the final experimental results:
+
+* `forecast-trajectories.png` — observed and reconstructed forecast trajectories across the validation and test periods
+* `directional-accuracy.png` — comparison of directional prediction accuracy across models and baselines
+* `simulated-sharpe.png` — comparison of the experimental simulated Sharpe-like metric
+* `regression-error-comparison.png` — comparison of regression error across models and simple baselines
+
 ## Evaluated Models
 
 The consolidated file currently includes:
@@ -140,12 +149,3 @@ src/model_tsfedl.ipynb
 ```
 
 For the complete methodology, limitations, and interpretation of the experiment, see the main repository [`README.md`](../README.md) and the Master's thesis under [`thesis/`](../thesis/).
-
-
-### `figures/`
-
-Curated visual summaries of the final experimental results:
-
-- `forecast-trajectories.png` — observed and reconstructed forecast trajectories across train, validation, and test periods
-- `directional-accuracy.png` — comparison of directional prediction accuracy across models and baselines
-- `simulated-sharpe.png` — comparison of the experimental simulated Sharpe-like metric
