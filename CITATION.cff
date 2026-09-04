@@ -1,18 +1,40 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite as follows"
+
+message: "If you use this software or research in your work, please cite this repository and the associated Master's thesis."
+
 type: software
+
+title: "Equity Forecasting with Deep Learning"
+
 authors:
-    - name: "Marc Delos"
-      email: "marcdp@dprojects.com"
-title: "Equity price forecasting through artificial intelligence"
-version: 1.0
-abstract: "Improvement of equity price forecasting through artificial intelligence techniques applied to high-frequency financial data."
-date-released: 2025-10-13
-url: "https://github.com/marcdp/master-ia-tfm"
+  - family-names: "Delos"
+    given-names: "Marc"
+
+abstract: "Applied AI/ML research comparing LSTM, N-BEATS, and TSFEDL deep-learning models with simple baselines for one-step-ahead hourly forecasting of a synthetic equity basket. Models are evaluated using regression accuracy, directional prediction, and simulated trading-oriented metrics."
+
+repository-code: "https://github.com/marcdp/equity-forecasting-ai"
+
 keywords:
-    - "deep learning"
-    - "time series"
-    - "financial price forecasting"
-    - "algoritthmic trading"
-    - "N-BEATS"
-license: "LGPL-3.0-only"
+  - "artificial intelligence"
+  - "machine learning"
+  - "deep learning"
+  - "financial machine learning"
+  - "time-series forecasting"
+  - "equity forecasting"
+  - "algorithmic trading"
+  - "LSTM"
+  - "N-BEATS"
+  - "TSFEDL"
+  - "financial time series"
+
+preferred-citation:
+  type: thesis
+  title: "Mejora de la predicción de cotizaciones de activos de renta variable mediante inteligencia artificial"
+  authors:
+    - family-names: "Delos"
+      given-names: "Marc"
+  year: 2025
+  thesis-type: "Master's thesis"
+  institution:
+    name: "Universidad Europea de Madrid"
+  url: "https://github.com/marcdp/equity-forecasting-ai/blob/main/thesis/masters-thesis.pdf"
