@@ -3,6 +3,7 @@ cff-version: 1.2.0
 message: "If you use this software or research in your work, please cite this repository and the associated Master's thesis."
 
 type: software
+license: MIT
 
 title: "Equity Forecasting with Deep Learning"
 
