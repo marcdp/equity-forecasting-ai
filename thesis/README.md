@@ -17,3 +17,8 @@ Copyright © 2025 Marc Delos. All rights reserved.
 Use, reproduction, or redistribution of the thesis may also be subject to applicable university policies and the rights associated with third-party material contained in the document.
 
 For citation information, see the repository's `CITATION.cff`.
+
+## Documents
+
+- [Master's thesis](masters-thesis.pdf)
+- [Thesis presentation](masters-thesis-presentation.pdf)

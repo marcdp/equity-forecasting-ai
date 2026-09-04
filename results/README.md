@@ -140,3 +140,12 @@ src/model_tsfedl.ipynb
 ```
 
 For the complete methodology, limitations, and interpretation of the experiment, see the main repository [`README.md`](../README.md) and the Master's thesis under [`thesis/`](../thesis/).
+
+
+### `figures/`
+
+Curated visual summaries of the final experimental results:
+
+- `forecast-trajectories.png` — observed and reconstructed forecast trajectories across train, validation, and test periods
+- `directional-accuracy.png` — comparison of directional prediction accuracy across models and baselines
+- `simulated-sharpe.png` — comparison of the experimental simulated Sharpe-like metric

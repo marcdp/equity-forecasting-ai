@@ -321,6 +321,20 @@ The repository also contains a random-uniform baseline notebook. The table above
 
 Machine-readable results are available in [`results/metrics.csv`](results/metrics.csv).
 
+### Forecast trajectories
+
+![Observed vs forecast trajectories](results/figures/forecast-trajectories.png)
+
+Comparison of the observed synthetic equity basket with reconstructed forecast
+trajectories across the validation and test periods.
+
+The figure illustrates how model behavior diverges across architectures and
+should be interpreted together with the quantitative test-set metrics:
+regression improvements over simple baselines remain small even when some
+models capture useful directional behavior.
+
+Additional result visualizations are available in [`results/figures/`](results/figures/).
+
 ---
 
 ## Key Findings
@@ -436,7 +450,12 @@ equity-forecasting-ai/
 ├── requirements.txt
 │
 ├── results/
-│   └── metrics.csv
+│   ├── README.md
+│   ├── metrics.csv
+│   └── figures/
+│       ├── directional-accuracy.png
+│       ├── forecast-trajectories.png
+│       └── simulated-sharpe.png
 │
 ├── src/
 │   ├── prepare.ipynb
