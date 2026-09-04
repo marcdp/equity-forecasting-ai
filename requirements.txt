@@ -15,3 +15,5 @@ numpy
 scipy
 torch
 requests
+jupyterlab
+ipykernel

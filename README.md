@@ -12,8 +12,8 @@ The study evaluates whether deep-learning models can provide useful predictive i
 **Forecast horizon:** One period ahead
 **Assets:** AAPL · MSFT · NVDA · IBM · GOOG
 
-[Read the full Master's Thesis](thesis/masters-thesis.pdf)
-
+[Read the Master's Thesis](thesis/masters-thesis.pdf) ·
+[View the Thesis Presentation](thesis/masters-thesis-presentation.pdf)
 ---
 
 ## Research Context
@@ -86,11 +86,16 @@ The repository currently includes supporting SOFR and VIX CSV files under:
 
 ```text
 work/download/
+├── README.md
 ├── SOFR.csv
 └── VIX.csv
 ```
 
-The original provider/provenance metadata for these two committed files is not currently encoded in the repository. That provenance, together with the exact temporal-alignment assumptions used when combining lower-frequency information with hourly observations, should be documented before considering the data pipeline fully reproducible.
+The original provider and retrieval metadata for these two committed files
+was not preserved in the original research environment.
+
+The temporal-alignment methodology and its information-availability
+limitations are documented in [`work/download/README.md`](work/download/README.md).
 
 ---
 
