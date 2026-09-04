@@ -424,6 +424,7 @@ The research therefore supports a cautious interpretation:
 equity-forecasting-ai/
 │
 ├── README.md
+├── LICENSE
 ├── CITATION.cff
 ├── requirements.txt
 │
@@ -443,10 +444,12 @@ equity-forecasting-ai/
 │
 ├── work/
 │   └── download/
+│       ├── README.md
 │       ├── SOFR.csv
 │       └── VIX.csv
 │
 └── thesis/
+    ├── README.md
     └── masters-thesis.pdf
 ```
 
@@ -487,11 +490,6 @@ Windows:
 pip install -r requirements.txt
 ```
 
-The current notebooks also directly rely on packages including PyTorch, SciPy, Requests, and Jupyter. Until the dependency file is fully normalized, these may need to be installed explicitly:
-
-```bash
-pip install torch scipy requests notebook jupyter ipykernel
-```
 
 ### 4. Configure Polygon.io access
 
@@ -543,7 +541,15 @@ Several decisions in the implementation are specifically intended to reduce comm
 * a separate untouched final test period;
 * common evaluation utilities across model families.
 
-The repository is still a research codebase rather than a production ML system. Dependency pinning, automated tests, data provenance documentation, and environment portability are areas being improved separately.
+
+The repository remains a research codebase rather than a production ML
+system. Exact dependency version pinning, automated tests, and stronger
+environment reproducibility remain areas for improvement.
+
+The external-data workflow and temporal-alignment assumptions are documented
+in `work/download/README.md`; however, the exact original source metadata for
+the committed SOFR and VIX files was not preserved in the original research
+environment.
 
 ---
 
@@ -577,9 +583,17 @@ The conclusions do not automatically extend to daily, weekly, or higher-frequenc
 
 ### External variables
 
-SOFR and VIX are included as model features.
+SOFR and VIX are included as model features and are joined to hourly
+observations by calendar date.
 
-Their original source metadata and precise information-availability/alignment assumptions should be documented more explicitly to make temporal leakage analysis independently auditable.
+This temporal alignment is documented in `work/download/README.md`.
+However, the original research did not preserve sufficient publication-time
+metadata to establish whether every same-day external observation would have
+been available at each hourly prediction timestamp.
+
+For a strict real-time forecasting system, these variables should be aligned
+according to their actual information-availability time, potentially using an
+explicit lag.
 
 ### Trading simulation
 
@@ -626,28 +640,26 @@ Citation metadata is also provided in:
 CITATION.cff
 ```
 
-The citation metadata should use the current repository address:
-
-```text
-https://github.com/marcdp/equity-forecasting-ai
-```
-
 ---
 
-## Licensing and Data Rights
+## License and Data Rights
 
-The source code, thesis document, and underlying financial datasets represent separate types of intellectual property and should not automatically be assumed to share the same licensing terms.
+Source code in this repository is licensed under the
+[MIT License](LICENSE), unless otherwise stated.
 
-At present:
+The software license does not automatically apply to the Master's thesis
+or to third-party financial and economic data.
 
-* a repository-level `LICENSE` file has not yet been added;
-* `CITATION.cff` contains software-license metadata that should be reconciled with the final repository license;
-* the thesis PDF is included for reading and academic citation and should not be assumed to inherit a software license;
-* Polygon.io market data remains subject to Polygon.io's applicable data and API terms;
-* redistribution rights for the committed SOFR and VIX source files should be checked against their original providers.
+- [`LICENSE`](LICENSE) — source-code license
+- [`thesis/README.md`](thesis/README.md) — thesis copyright and reuse information
+- [`work/download/README.md`](work/download/README.md) — external-data provenance and rights
 
-These licensing boundaries should be clarified before reusing or redistributing repository content outside normal source-review and citation purposes.
+The Polygon.io market data used to reproduce the primary equity dataset
+remains subject to Polygon.io's applicable terms.
 
+The committed SOFR and VIX files contain third-party data. Their original
+provider and redistribution terms were not preserved in the original
+research repository and should therefore be verified before redistribution.
 ---
 
 ## Disclaimer
