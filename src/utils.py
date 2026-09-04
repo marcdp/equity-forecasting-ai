@@ -54,8 +54,12 @@ FORECAST_LENGTH=1
 METRICS_DIRECTION_MARGIN =  0.0001 
 
 # torch device
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-print(f"Using {DEVICE} ({torch.cuda.get_device_name(0)})")
+if torch.cuda.is_available():
+    DEVICE = "cuda"
+    print(f"Using CUDA ({torch.cuda.get_device_name(0)})")
+else:
+    DEVICE = "cpu"
+    print("Using CPU")
 
 # reset_seed
 SEED = 42

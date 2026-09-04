@@ -28,7 +28,7 @@ keywords:
   - "financial time series"
 
 preferred-citation:
-  type: thesis
+  type: generic
   title: "Mejora de la predicción de cotizaciones de activos de renta variable mediante inteligencia artificial"
   authors:
     - family-names: "Delos"

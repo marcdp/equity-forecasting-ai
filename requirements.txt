@@ -11,3 +11,7 @@ tensorflow
 dprojectstools
 ruptures
 tabulate
+numpy
+scipy
+torch
+requests
