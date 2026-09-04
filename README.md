@@ -434,7 +434,6 @@ The result is therefore more nuanced than "`AI beats the baseline`":
 
 ---
 
-## Interpretation
 
 The low and sometimes negative R² values are an important part of the result rather than something to hide.
 
