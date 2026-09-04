@@ -6,11 +6,20 @@ This repository contains the research code developed for my Master's Thesis in A
 
 The study evaluates whether deep-learning models can provide useful predictive information for short-horizon financial forecasting when compared with simple statistical baselines.
 
-**Models:** LSTM · N-BEATS · TSFEDL
-**Frequency:** Hourly
-**Period:** 2021–2024
-**Forecast horizon:** One period ahead
-**Assets:** AAPL · MSFT · NVDA · IBM · GOOG
+| | |
+|---|---|
+| **Models** | LSTM · N-BEATS · TSFEDL |
+| **Frequency** | Hourly |
+| **Period** | 2021–2024 |
+| **Forecast horizon** | One period ahead |
+| **Assets** | AAPL · MSFT · NVDA · IBM · GOOG |
+
+The results highlight an important distinction:
+
+> **Forecast accuracy, directional accuracy, and simulated trading utility are related but distinct objectives.**
+
+LSTM produced the strongest regression performance among the evaluated deep-learning models, while N-BEATS produced the strongest directional result. At the same time, simple zero/mean baselines remained highly competitive on magnitude-based errors.
+
 
 [Read the Master's Thesis](thesis/masters-thesis.pdf) ·
 [View the Thesis Presentation](thesis/masters-thesis-presentation.pdf)
@@ -578,9 +587,9 @@ Several decisions in the implementation are specifically intended to reduce comm
 * common evaluation utilities across model families.
 
 
-The repository remains a research codebase rather than a production ML
-system. Exact dependency version pinning, automated tests, and stronger
-environment reproducibility remain areas for improvement.
+The repository preserves the original research workflow and focuses on
+documenting the methodology and experimental results. Exact dependency
+version pinning would further improve environment-level reproducibility.
 
 The external-data workflow and temporal-alignment assumptions are documented
 in `work/download/README.md`; however, the exact original source metadata for
